@@ -1,0 +1,13 @@
+/*
+CSS 적용하는 3가지 방법
+
+1) inline 방식
+htnml 태그에 직접 선언
+
+2) internal 방식
+html 파일의 body 태그가 아닌 head 태그 사이에 선언
+
+3) external 방식
+타겟 html 파일 외부에 파일로 선언
+
+*/
