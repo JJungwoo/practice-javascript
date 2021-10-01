@@ -16,6 +16,18 @@ todoForm.addEventListener("submit", function() {
     const todoItemSpan = document.createElement("span")
     todoItemSpan.innerText = todoInput.value
     const todoItemLi = document.createElement("li")
+
+    // 생성한 element에 class 식별자 이름 부여하기
+    todoItemSpan.className = "todoItemSpan"
+
+    // 생성한 span element에 클릭 이벤트 추가하기
+    todoItemLi.addEventListener("click", function() {
+        // click 이벤트를 활용하여 toggle의 on/off 기능을 추가
+        // css에서 클래스이름.chceked에 스타일 부여하면 on/off 적용 가능하다.
+        todoItemLi.classList.toggle("checked");
+        todoItemSpan.classList.toggle("checked");
+    });
+
     todoItemLi.appendChild(todoItemSpan)    // appendChild : 인자값으로 들어온 Element를 하위 Element 태그로 연결
 
     todoList.appendChild(todoItemLi)
@@ -24,5 +36,3 @@ todoForm.addEventListener("submit", function() {
         todoInput.placeholder = "목록을 추가하려면 할 일을 작성하고 엔터를 누르세요"
     }
 })
-
-    

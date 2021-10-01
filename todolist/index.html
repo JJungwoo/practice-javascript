@@ -5,18 +5,20 @@
   <title>JJungwoo</title>
   <script defer src="todolist.js"></script> 
   <!-- defer : 외부 자바스크립트 파일을 html parsing 이후에 다운로드하도록 만드는 선언 -->
+  <link href="todolist.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <header>
     <h1>To Do List</h1>
 </header>
 
-<form action="" id="todo-form">
-    <input type="text" size="50" placeholder="목록을 추가하려면 할 일을 작성하고 엔터를 누르세요">
-</form>
-<ul id="todo-list">
+<div class="todolist-div">
+  <form action="" id="todo-form">
+      <input type="text" id="todo-input" placeholder="목록을 추가하려면 할 일을 작성하고 엔터를 누르세요">
+  </form>
+  <ul id="todo-list">
 
-</ul>
-
+  </ul>
+</div>
 </body>
 </html>

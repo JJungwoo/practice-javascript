@@ -1,13 +1,74 @@
-/*
-CSS 적용하는 3가지 방법
 
-1) inline 방식
-htnml 태그에 직접 선언
+/* 여기어때의 '잘난체' 웹폰트 적용 */
+@font-face {
+    font-family: 'yg-jalnan';   
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal; /* 텍스트를 얼마나 두껍게 표현할지를 설정함. */
+    font-style: normal;
+    /*
+    font-style : 이탤릭체를 사용하기 위해 사용하며, 다음과 같이 3가지의 속성값을 가집니다.
+    - normal : 텍스트에 어떠한 스타일도 적용하지 않습니다.
+    - italic : 텍스트를 이탤릭체로 나타냅니다.
+    - oblique : 텍스트를 기울입니다. 이 속성값은 italic과 매우 유사하지만 지원하는 웹 브라우저가 거의 없습니다.
+    ref) http://tcpschool.com/css/css_basic_fonts
+    */
+}
 
-2) internal 방식
-html 파일의 body 태그가 아닌 head 태그 사이에 선언
+* {
+    font-family: 'yg-jalnan';   /* 글꼴 집합 적용하기 */
+    box-sizing: border-box;
+}
 
-3) external 방식
-타겟 html 파일 외부에 파일로 선언
+ul {
+    margin: 0;
+    /* 
+        margin : 테두리(border)와 이숭하는 요소 사이의 간격 영역 크기 설정 
+        padding 과 다르게 background-color 속성으로 배경 설정의 영향을 받지 않는다.
+    */
+    padding: 0;
+    /* padding : 내용(content)와 테두리(border) 사이의 간격 */
+}
 
-*/
+header {
+    color : gray
+}
+
+#todo-list {
+    margin: 0;
+    border: none;
+    /* border : 요소의 테두리 */
+    border-radius: 30px;
+    /* border-radius : 요소의 테두리 경계의 꼭지점을 둥글게 설정 */
+    width: 50%;
+    
+    padding: 12px 8px 12px 20px;
+    /* 
+    padding, margin 같은 정보들 한줄에 모두 입력할 때 순서
+    top, right, bottom, left 순으로 입력
+    */
+
+    font-size: 18px;
+    cursor: pointer;    /* 마우스 커서가 요소를 클릭할 수 있는 포인터를 생성 */
+}
+
+#todo-input {
+    width: 40%;     /* 요소의 넓이가 전체 창에서 할당되는 크기 비율 */
+    opacity: 50%;   /* 텍스트 투명도 50%(=0.5)*/
+}
+
+/* toggle로 추가한 checked 상태 효과 설정 */
+ul li.checked {
+    list-style: "✔ ";
+    padding-left:0px;
+}
+
+.todoItemSpan.checked {
+    text-decoration: line-through;
+}
+
+/* hover는 해당 요소에 마우스를 올릴때 효과를 부여할 수 있다. */
+.todoItemSpan:hover {
+    background-color: rgba(211, 32, 70, 0.651);
+    color: white;
+}
+  
