@@ -3,3 +3,4 @@
 자바스크립트 공부하며 몰랐던 내용들 혹은 주의해야할 내용, 문제 발생 시 해결했던 과정에 대한 내용을 정리한다.
 
 - [createElement 메서드와 appendChild 메서드](https://github.com/JJungwoo/practice-javascript/blob/main/contents/createElement_appendChild.md)
+- [CSS 처음 사용할 때 꼭 알아두어야 할 것들](https://github.com/JJungwoo/practice-javascript/blob/main/contents/css_tip.md)
