@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JJungwoo</title>
+  <script defer src="bfs.js"></script> 
+  <!-- defer : 외부 자바스크립트 파일을 html parsing 이후에 다운로드하도록 만드는 선언 -->
+  <!-- <link href="todolist.css" rel="stylesheet" type="text/css"> -->
+  <!-- html 버전 9 이하일 때 이전 버전도 동작되도록 html5shiv 선언 -->
+  <!-- [if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <![endif] -->
+  <style>
+      #table {
+          border: 1px solid black;
+          /* border-collapse: collapse; */
+          border-collapse: separate;
+          border-spacing: 1px;
+      }
+      /* >는 자식을 의미, 공백은 자손을 의미 */
+      #table td {
+          border: 1px solid orange;
+          padding: 20px;
+          align-content: center;
+      }
+      node-red {
+          background-color: red;
+      }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Algorithm - DFS</h1>
+    </header>
+    <section>
+        <div>
+            <button onclick="bfs(0, 0, 5)">실행</button>
+        </div>
+        <div>
+            <table id="table">
+                <tr>
+                    <td class="td00">1</td>
+                    <td class="td01">2</td>
+                    <td class="td02">3</td>
+                    <td class="td03">4</td>
+                    <td class="td04">5</td>
+                </tr>
+                <tr>
+                    <td id="td10">6</td>
+                    <td id="td11">7</td>
+                    <td id="td12">8</td>
+                    <td id="td13">9</td>
+                    <td id="td14">10</td>
+                </tr>
+                <tr>
+                    <td id="td20">11</td>
+                    <td id="td21">12</td>
+                    <td id="td22">13</td>
+                    <td id="td23">14</td>
+                    <td id="td24">15</td>
+                </tr>
+                <tr>
+                    <td id="td30">16</td>
+                    <td id="td31">17</td>
+                    <td id="td32">18</td>
+                    <td id="td33">19</td>
+                    <td id="td34">20</td>
+                </tr>
+                <tr>
+                    <td id="td40">21</td>
+                    <td id="td41">22</td>
+                    <td id="td42">23</td>
+                    <td id="td43">24</td>
+                    <td id="td44">25</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+</body>
+</html>
