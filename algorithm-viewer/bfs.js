@@ -19,23 +19,10 @@ function sleep (delay) {
 }
 // 참고: https://multifrontgarden.tistory.com/157
  
-// 방문할 배열
-const visited = [
-    [false, false, false, false, false],
-    [false, false, false, false, false], 
-    [false, false, false, false, false],
-    [false, false, false, false, false],
-    [false, false, false, false, false] 
-];
-
 // 방향
 const dir = [[-1, 0], [1, 0], [0, -1], [0, 1]];
 
-function init() {
-    visited.fill(false);
-}
-
-async function setColorTable(x, y) {
+function setColorTable(x, y) {
     const elementId = "td" + x + y;
     console.log(elementId);
     document.getElementById(elementId).style.background = "red"; 
@@ -52,7 +39,15 @@ const promise = new Promise((x, y) => {
 });
 
 function bfs(x, y, n) {
-    init();
+    // 방문할 배열
+    const visited = [
+        [false, false, false, false, false],
+        [false, false, false, false, false], 
+        [false, false, false, false, false],
+        [false, false, false, false, false],
+        [false, false, false, false, false] 
+    ];
+
     const queue = [[x, y]];
     visited[x][y] = true;
 
